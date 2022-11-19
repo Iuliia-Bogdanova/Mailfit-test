@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой питомец</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>ОПРОСНЫЙ ЛИСТ</h1>
+        <form name="catForm" action="#" method="POST">
+            <img src="(3).jpg" id="catImage" onclick="changeMe()" alt="cat"> <br>
+            <p class="item"><label for="catName">1. Кличка вашего питомца</label></p>
+                <div>
+                    <input type="text" class="text" name="catName" id="catName" placeholder="Кличка" autofocus required>*
+                </div>
+            <p class="item"><label for="name2"> 2. Порода </label></p>
+                <div>
+                    <input type="text" class="text">
+                </div>
+            <p class="item">3. Пол питомца</p>
+                <div>
+                    <input type="radio" id="sexChoice1" name="sex" value="male">
+                        <label for="sexChoice1">самец</label>
+                    <input type="radio" id="sexChoice2" name="sex" value="female">
+                        <label for="sexChoice2">самка</label>
+                </div required>*
+            <p class="item">4. Питомец кастрирован/стерилизован?</p>
+                <div>
+                    <input type="radio" id="contactChoice3" name="contact" value="email">
+                        <label for="contactChoice1">да</label>
+                    <input type="radio" id="contactChoice4" name="contact" value="phone">
+                        <label for="contactChoice2">нет</label>
+                </div> 
+            <p class="item"><label for="name3">5. Дата рождения питомца </label></p> 
+                <div>
+                    <input type="date" class="text" required>*
+                </div>
+            <p class="item">6. Состояние здоровья питомца</p>
+                <div>
+                    <textarea rows="8"></textarea>
+                </div>
+            <p class="item"><label for="name4">7. ФИО владельца </label></p> 
+                <div>
+                    <input type="text" class="text" required>*
+                </div>
+            <p class="item"><label for="name5">8. Контактные данные владельца </label></p> 
+                <div>
+                    <input type="text" class="text" required>*
+                </div> 
+            <p class="item">Готово! Сохраните ваши ответы</p> 
+            <p><input type="button" name="save" value="Сохранить" onclick="clickMe()"></p> 
+            <p class="item">Как с вами лучше связаться:</p>
+                <div>
+                    <input type="radio" id="contactChoice5"
+                    name="contact" value="email">
+                    <label for="contactChoice1">по телефону</label>
+                    <input type="radio" id="contactChoice6"
+                    name="contact" value="phone">
+                    <label for="contactChoice2">SMS сообщение</label>
+                    <input type="radio" id="contactChoice7"
+                    name="contact" value="mail">
+                    <label for="contactChoice3">по электронной почте</label>
+                    <input type="radio" id="contactChoice8"
+                    name="contact" value="email">
+                    <label for="contactChoice4">мессенджер </label>
+                        <select>
+                            <option value="1"> Viber </option>
+                            <option value="2"> WhatsApp </option>
+                            <option value="3"> Telegram </option>
+                        </select>
+                </div>
+            <div>
+                <input type="checkbox">я подтверждаю указанную информацию
+            </div>
+            <button> отправить </button>
+        </form>
+    </div>
+        
+    <script src="index.js"></script>
+</body>
+</html>
