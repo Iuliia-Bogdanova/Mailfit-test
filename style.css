@@ -1,18 +1,14 @@
+input:invalid {border-color: red;}
+input:valid {border-color: green;}
+
 .wrapper {
     margin: 20px;
     text-align: center;
     
 }
 
-.item {
-    margin: 20px;
-    font-size: larger;
-    border: 1px solid red;
-}
-
-.text {
-    width: 250px;
-    height: 30px;
+.field {
+    margin: 10px;
     font-size: large;
-    border: 1px solid green;
+    width: auto;
 }
