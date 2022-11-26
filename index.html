@@ -14,11 +14,11 @@
             <img src="(3).jpg" id="catImage" onclick="changeMe()" alt="cat"> <br>
             <div class="field">*
                 <label for="catName">1. Кличка вашего питомца</label>
-                <input type="text" id="catName" required>
+                <input type="text" id="catName" name="catName" required>
             </div>
             <div class="field">
                 <label for="breed">2. Порода</label>
-                <input type="text" id="breed">
+                <input type="text" id="breed" name="breed">
             </div>
             <div class="field" required>*
                 3. Пол питомца:
@@ -36,16 +36,27 @@
             </div>
             <div class="field">*
                 <label class="date">5. Дата рождения питомца</label>
-                <input type="date" class="text" required>
+                <input type="date" class="text" name="date" required>
             </div>
             <div class="field">*
                 <label>
-                    6. Состояние здоровья питомца:
+                    6. Корм:
+                <label class="radio-label">
+                    <input type="radio" name="feed" value="dry" id="dry">cухой</label>
+                <label class="radio-label">
+                    <input type="radio" name="feed" value="wet" id="wet">влажный</label>
+                    <label class="radio-label">
+                        <input type="radio" name="feed" value="mixed" id="mixed">cмешанный</label>
+                    <label class="radio-label">
+                        <input type="radio" name="feed" value="natural" id="natural">натуральный</label>
+            </div>
+            <div class="field" aria-required="true">*
+                    7. Состояние здоровья питомца:
                     <textarea name="comment" cols="40" rows="3" required></textarea>
                 </label>
             </div>
             <div class="field">
-                <label for="contacts">7. Ваши контактные данные</label>
+                <label for="contacts">8. Ваши контактные данные</label>
                 <p>
                     <label for="name">ФИО:</label>
                     <input type="text" name="name" id="name" minlength="5" maxlength="100" size="30" required>*
@@ -92,7 +103,7 @@
                 <input type="button" name="save" value="Сохранить" onclick="clickMe()">
             </div>
             <div class="btn">
-                <input type="submit" value="Отправить">
+                <input type="submit" name="send" value="Отправить" onclick="sendResult()">
             </div>
         </form>
     </div>
