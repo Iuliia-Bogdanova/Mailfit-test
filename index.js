@@ -7,7 +7,6 @@ function clickMe() {
     let catNameInput = document.getElementById('catName');
     console.log(catNameInput.value);
 }
-
 class Cat {
     constructor(catName, breed, gender, ster, date, feed, comment) {
         this.catName = catName;
@@ -20,10 +19,14 @@ class Cat {
     }
 
     sendResult() {
-        console.log(`Это ${this.name}, он ${this.breed}`);
+        console.log(`Это мой питомец ${this.catName}, он ${this.breed}`)
     }
 }
 
 let cat = new Cat();
 
 console.log(sendResult);
+
+const button = document.querySelector(".btn");
+button.addEventListener("click", sendResult);
+
