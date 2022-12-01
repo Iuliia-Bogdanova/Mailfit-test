@@ -18,15 +18,23 @@ class Cat {
         this.comment = comment;
     }
 
-    sendResult() {
-        console.log(`Это мой питомец ${this.catName}, он ${this.breed}`)
-    }
 }
 
 let cat = new Cat();
 
-console.log(sendResult);
+function getValues() {
+  
+    let catName = document.getElementById("name").value;
+    // и т.д 
+  
+    const cat1 = new Cat(catName);
+    console.log(cat1)
+}
+
 
 const button = document.querySelector(".btn");
-button.addEventListener("click", sendResult);
+button.addEventListener("click", getValues);
+
+console.log(getValues);
+
 
