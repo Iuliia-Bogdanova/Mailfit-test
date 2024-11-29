@@ -1,113 +1,157 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой питомец</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <div class="wrapper">
-        <h1>ОПРОСНЫЙ ЛИСТ</h1>
-        <form name="catForm" action="#" method="POST">
-            <img src="(3).jpg" id="catImage" onclick="changeMe()" alt="cat"> <br>
-            <div class="field">*
-                <label for="catName">1. Кличка вашего питомца</label>
-                <input type="text" id="catName" name="catName" required>
-            </div>
-            <div class="field">
-                <label for="breed">2. Порода</label>
-                <input type="text" id="breed" name="breed">
-            </div>
-            <div class="field" required>*
-                3. Пол питомца:
-                <label class="radio-label">
-                    <input type="radio" name="gender" value="male" id="male">cамец</label>
-                <label class="radio-label">
-                    <input type="radio" name="gender" value="female" id="female">cамка</label>
-            </div>
-            <div class="field" aria-required="true">*
-                4. Питомец кастрирован/стерилизован:
-                <label class="radio-label">
-                    <input type="radio" name="ster" value="yes" id="yes">да </label>
-                <label class="radio-label">
-                    <input type="radio" name="ster" value="no" id="no">нет</label>
-            </div>
-            <div class="field">*
-                <label class="date">5. Дата рождения питомца</label>
-                <input type="date" class="text" name="date" required>
-            </div>
-            <div class="field">*
-                <label>
-                    6. Корм:
-                <label class="radio-label">
-                    <input type="radio" name="feed" value="dry" id="dry">cухой</label>
-                <label class="radio-label">
-                    <input type="radio" name="feed" value="wet" id="wet">влажный</label>
-                    <label class="radio-label">
-                        <input type="radio" name="feed" value="mixed" id="mixed">cмешанный</label>
-                    <label class="radio-label">
-                        <input type="radio" name="feed" value="natural" id="natural">натуральный</label>
-            </div>
-            <div class="field" aria-required="true">*
-                    7. Состояние здоровья питомца:
-                    <textarea name="comment" cols="40" rows="3" required></textarea>
-                </label>
-            </div>
-            <div class="field">
-                <label for="contacts">8. Ваши контактные данные</label>
-                <p>
-                    <label for="name">ФИО:</label>
-                    <input type="text" name="name" id="name" minlength="5" maxlength="100" size="30" required>*
-                </p>
-                <p>
-                    <label for="phone">Телефон:</label>
-                    <input type="tel" name="phone" id="phone" pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>*<br>
-                    <small>Формат: +7-123-456-78-90</small>
-                </p>
-                <p>
-                    <label for="email">Ваш email:</label>
-                    <input type="email" name="email" id="email">
-                </p>
-            </div>
-            <div class="field">
-                <p class="item">Как с вами лучше связаться:</p>
-                <div>
-                    <input type="radio" id="contactChoice1"
-                    name="contact" value="phone">
-                    <label for="contactChoice1">по телефону</label>
-                    <input type="radio" id="contactChoice2"
-                    name="contact" value="SMS">
-                    <label for="contactChoice2">SMS сообщение</label>
-                    <input type="radio" id="contactChoice3"
-                    name="contact" value="mail">
-                    <label for="contactChoice3">по электронной почте</label>
-                    <input type="radio" id="contactChoice4"
-                    name="contact" value="messenger">
-                    <label for="contactChoice4">мессенджер </label>
-                        <select>
-                            <option value="1"> Viber </option>
-                            <option value="2"> WhatsApp </option>
-                            <option value="3"> Telegram </option>
-                        </select>
-                </div>
-            </div>
-            <div class="field">
-                <label>
-                    <input type="checkbox" name="agree">Согласен на обработку данных
-                </label>
-            </div>
-            <div class="field">
-                <label for="item">Готово! Сохраните ваши ответы</label> 
-                <input type="button" name="save" value="Сохранить" onclick="clickMe()">
-            </div>
-            <div class="btn">
-                <input type="submit" id="send" name="send" value="Отправить" onclick="sendResult()">
-            </div>
-        </form>
-    </div>
-        
-    <script src="index.js"></script>
-</body>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <!-- <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" /> -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+      table {
+        border-spacing: 0;
+        mso-cellspacing: 0;
+        mso-padding-alt: 0;
+      }
+
+      td {
+        padding: 0;
+      }
+
+      #outlook a {
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: #e8fbfa;
+        font-size: 16px;
+      }
+
+      @media screen and (max-width: 599.98px) {
+        .full-width {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .mobile-padding {
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+        }
+
+        .mobile-col-padding {
+          padding-left: 0px !important;
+          padding-right: 0px !important;
+        }
+      }
+
+      @media screen and (max-width: 399.98px) {
+        br {
+          display: none !important;
+        }
+
+        .two-columns .column {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .two-columns .column img {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .three-columns .column {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .three-columns .column img {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+				.four-columns .column {
+					width: 100% !important;
+					max-width: 100% !important;
+				}
+
+				.four-columns .column img {
+					width: 100% !important;
+					max-width: 100% !important;
+				}
+      }
+
+
+      /* :root {
+        color-scheme: light dark;
+        supported-color-schemes: light dark;
+      } */
+
+      /* @media (prefers-color-scheme: dark) {
+        table,
+        td {
+          background-color: #06080B !important;
+        }
+
+        h1,
+        h2,
+        p {
+          color: #ffffff !important;
+        }
+      } */
+
+    </style>
+    <!--[if (gte mso 9) | (IE)]>
+      <style type="text/css">
+        table {
+          border-collapse: collapse !important;
+        }
+      </style>
+    <![endif]-->
+
+    <!--[if (gte mso 9) | (IE)]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG />
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    <![endif]-->
+  </head>
+  <body style="Margin:0; padding:0;min-width:100%;background-color: #dde0e1;">
+    <!--[if (gte mso 9) | (IE)]>
+      <style type="text/css">
+        body { background-color: #dde0e1 !important;}
+        body, table, td, p, a { font-family: sans-serif, Arial, Helvetica !important;}
+      </style>
+    <![endif]-->
+
+    <center style="width: 100%;table-layout: fixed;background-color: #dde0e1;padding-top: 40px; padding-bottom: 40px;">
+      <div style="max-width: 600px;background-color: #fafdfe;box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+        <!-- Прехедер -->
+        <div style="font-size:0;line-height: 1px;mso-line-height-rule:exactly;display: none;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">
+          Предехер
+        </div>
+        <!--[if (gte mso 9) | (IE)]>
+          <table width="600" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+          <tr>
+          <td>
+        <![endif]-->
+        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: #fafdfe;color: #565656;Margin:0;padding:0;max-width: 600px;width:100%;font-family: 'Inter', Arial, sans-serif, Helvetica;">
+
+          <!-- Здесь секции письма -->
+
+        </table>
+        <!--[if (gte mso 9) | (IE)]>
+          </td>
+          </tr>
+          </table>
+        <![endif]-->
+      </div>
+    </center>
+  </body>
 </html>
